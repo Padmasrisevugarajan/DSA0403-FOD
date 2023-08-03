@@ -1,0 +1,11 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv('your_dataset.csv')
+likes = df['likes']
+frequency_distribution = likes.value_counts()
+frequency_distribution = frequency_distribution.sort_index(ascending=False)
+frequency_distribution.plot(kind='bar')
+plt.xlabel('Number of Likes')
+plt.ylabel('Frequency')
+plt.title('Frequency Distribution of Likes')
+plt.show()
